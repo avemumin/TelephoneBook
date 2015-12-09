@@ -42,6 +42,7 @@
             this.LastNameBextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,9 +152,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 144);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 167);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 205);
+            this.dataGridView1.Size = new System.Drawing.Size(459, 182);
             this.dataGridView1.TabIndex = 12;
             // 
             // contextMenuStrip1
@@ -161,11 +162,22 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // saveButton
+            // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.saveButton.Location = new System.Drawing.Point(13, 138);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 14;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LastNameBextBox);
             this.Controls.Add(this.addressTextBox);
@@ -204,6 +216,7 @@
         private System.Windows.Forms.TextBox LastNameBextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button saveButton;
     }
 }
 
