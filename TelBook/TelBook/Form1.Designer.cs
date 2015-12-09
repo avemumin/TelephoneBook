@@ -35,7 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.customTextbox = new System.Windows.Forms.TextBox();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
@@ -43,7 +43,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.saveButton = new System.Windows.Forms.Button();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editAcceptButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -104,13 +108,14 @@
             this.firstNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.firstNameTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // customTextbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(13, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 7;
+            this.customTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.customTextbox.Location = new System.Drawing.Point(449, 139);
+            this.customTextbox.Name = "customTextbox";
+            this.customTextbox.Size = new System.Drawing.Size(23, 22);
+            this.customTextbox.TabIndex = 7;
+            this.customTextbox.Visible = false;
             // 
             // phoneNumberTextBox
             // 
@@ -131,10 +136,10 @@
             // addressTextBox
             // 
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.addressTextBox.Location = new System.Drawing.Point(135, 84);
+            this.addressTextBox.Location = new System.Drawing.Point(116, 84);
             this.addressTextBox.Multiline = true;
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(337, 40);
+            this.addressTextBox.Size = new System.Drawing.Size(356, 40);
             this.addressTextBox.TabIndex = 10;
             // 
             // lastNameBextBox
@@ -154,13 +159,16 @@
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 167);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(609, 182);
             this.dataGridView1.TabIndex = 12;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
             // 
             // saveButton
             // 
@@ -173,18 +181,45 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // editAcceptButton
+            // 
+            this.editAcceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.editAcceptButton.Location = new System.Drawing.Point(116, 138);
+            this.editAcceptButton.Name = "editAcceptButton";
+            this.editAcceptButton.Size = new System.Drawing.Size(75, 23);
+            this.editAcceptButton.TabIndex = 15;
+            this.editAcceptButton.Text = "Edit";
+            this.editAcceptButton.UseVisualStyleBackColor = true;
+            this.editAcceptButton.Visible = false;
+            this.editAcceptButton.Click += new System.EventHandler(this.editAcceptButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.editAcceptButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lastNameBextBox);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.phoneNumberTextBox);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.customTextbox);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -192,11 +227,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(900, 600);
-            this.MinimumSize = new System.Drawing.Size(500, 400);
+            this.MinimumSize = new System.Drawing.Size(650, 400);
             this.Name = "Form1";
             this.Text = "Personal Phone Book";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +246,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox customTextbox;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
@@ -218,6 +254,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Button editAcceptButton;
     }
 }
 
