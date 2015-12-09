@@ -7,7 +7,7 @@ namespace TelBook
 {
     public partial class Form1 : Form
     {
-
+       
         SQLiteConnection myConnection = new SQLiteConnection(@"Data Source=E:\ZAPISANE\DataBases\PB\DaneOsob.db");
         public Form1()
         {
@@ -81,6 +81,11 @@ namespace TelBook
             UpgradeDataView();
             MessageBox.Show("Rekord poprawiono", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             editAcceptButton.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

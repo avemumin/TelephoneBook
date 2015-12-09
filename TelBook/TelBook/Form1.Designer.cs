@@ -46,6 +46,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAcceptButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -111,9 +112,9 @@
             // customTextbox
             // 
             this.customTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.customTextbox.Location = new System.Drawing.Point(449, 139);
+            this.customTextbox.Location = new System.Drawing.Point(612, 139);
             this.customTextbox.Name = "customTextbox";
-            this.customTextbox.Size = new System.Drawing.Size(23, 22);
+            this.customTextbox.Size = new System.Drawing.Size(10, 22);
             this.customTextbox.TabIndex = 7;
             this.customTextbox.Visible = false;
             // 
@@ -207,11 +208,23 @@
             this.editAcceptButton.Visible = false;
             this.editAcceptButton.Click += new System.EventHandler(this.editAcceptButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(518, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 58);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.editAcceptButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.dataGridView1);
@@ -257,6 +270,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Button editAcceptButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
