@@ -12,7 +12,7 @@ namespace TelBook
         public Form1()
         {
             InitializeComponent();
-           
+            myConnection.Open();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,6 +29,19 @@ namespace TelBook
             SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(displayCommand, myConnection);
             myAdapter.Fill(dataView);
             dataGridView1.DataSource = dataView;
+        }
+        /// <summary>
+        /// Zapis danych do bazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            SQLiteCommand myCommand = new SQLiteCommand(myConnection);
+            myCommand.CommandText = "Insert Into persons (FirstName,LastName,Address,Email,PhoneNumber) values('" + firstNameTextBox.Text + "','" + lastNameBextBox.Text + "','" + addressTextBox.Text + "','" + emailTextBox.Text + "','" + phoneNumberTextBox.Text + "')";
+            myCommand.ExecuteNonQuery();
+            UpgradeDataView();
+            MessageBox.Show("Dane Zapisano");
         }
     }
 }

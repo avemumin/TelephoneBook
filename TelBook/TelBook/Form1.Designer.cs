@@ -39,7 +39,7 @@
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.LastNameBextBox = new System.Windows.Forms.TextBox();
+            this.lastNameBextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.saveButton = new System.Windows.Forms.Button();
@@ -137,13 +137,13 @@
             this.addressTextBox.Size = new System.Drawing.Size(337, 40);
             this.addressTextBox.TabIndex = 10;
             // 
-            // LastNameBextBox
+            // lastNameBextBox
             // 
-            this.LastNameBextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LastNameBextBox.Location = new System.Drawing.Point(116, 47);
-            this.LastNameBextBox.Name = "LastNameBextBox";
-            this.LastNameBextBox.Size = new System.Drawing.Size(100, 22);
-            this.LastNameBextBox.TabIndex = 11;
+            this.lastNameBextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lastNameBextBox.Location = new System.Drawing.Point(116, 47);
+            this.lastNameBextBox.Name = "lastNameBextBox";
+            this.lastNameBextBox.Size = new System.Drawing.Size(100, 22);
+            this.lastNameBextBox.TabIndex = 11;
             // 
             // dataGridView1
             // 
@@ -171,6 +171,7 @@
             this.saveButton.TabIndex = 14;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // Form1
             // 
@@ -179,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.LastNameBextBox);
+            this.Controls.Add(this.lastNameBextBox);
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.phoneNumberTextBox);
@@ -213,7 +214,7 @@
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.TextBox LastNameBextBox;
+        private System.Windows.Forms.TextBox lastNameBextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button saveButton;
