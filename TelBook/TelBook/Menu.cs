@@ -12,6 +12,23 @@ namespace TelBook
 {
     public partial class Menu : Form
     {
+        private string name;
+
+        public string Names
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+
+
         SQLiteConnection passConnection = new SQLiteConnection(@"Data Source=E:\ZAPISANE\DataBases\PersonalPassword\loginID.db");
         Form1 forma;
         public Menu()
@@ -27,18 +44,19 @@ namespace TelBook
             // SQLiteCommand myCommand = new SQLiteCommand(passConnection);
             SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * from logins", passConnection);
             adapter.Fill(data);
-            string name = data.Rows[0]["LoginName"].ToString();
-            string password = data.Rows[0]["UsersPassword"].ToString();
+             Names = data.Rows[0]["LoginName"].ToString();
+             Password = data.Rows[0]["UsersPassword"].ToString();
 
-            if ((name == textBox1.Text) && (password == textBox2.Text))
+            if ((Names == textBox1.Text) && (Password == textBox2.Text))
             {
                 forma.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Zle haslo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.BackColor = Color.Red;
                 textBox2.BackColor = Color.Red;
+                MessageBox.Show("Zle haslo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
