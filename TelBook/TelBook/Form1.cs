@@ -7,12 +7,14 @@ namespace TelBook
 {
     public partial class Form1 : Form
     {
-       
+
+        
         SQLiteConnection myConnection = new SQLiteConnection(@"Data Source=E:\ZAPISANE\DataBases\PB\DaneOsob.db");
         public Form1()
         {
             InitializeComponent();
             myConnection.Open();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -85,7 +87,9 @@ namespace TelBook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Menu switchToMenu = new Menu();
+            switchToMenu.Show();
+            this.Hide();
         }
     }
 }

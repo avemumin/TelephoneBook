@@ -33,14 +33,20 @@ namespace TelBook
             if ((name == textBox1.Text) && (password == textBox2.Text))
             {
                 forma.Show();
-
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Zle haslo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox2.BackColor = Color.Red;
             }
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
