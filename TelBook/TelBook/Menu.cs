@@ -27,8 +27,6 @@ namespace TelBook
             set { password = value; }
         }
 
-
-
         SQLiteConnection passConnection = new SQLiteConnection(@"Data Source=E:\ZAPISANE\DataBases\PersonalPassword\loginID.db");
         Form1 forma;
         public Menu()
